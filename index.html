@@ -1,0 +1,236 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="index.css">
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width"/>
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+
+<body >
+
+
+
+<!--Upper blue box -->
+<div id = "top">
+ <!--Inside white box -->
+    <div id = "inside-top">
+	
+	 <h1 id = "top-logo-left">Attorney<br id = "abreak">
+	 David Rothkopf 
+	 </h1>
+	
+	</div>
+	 
+	 <h1 id = "top-logo-right">954-261-2916<br id = "bbreak">
+	 10316 NW 50th CT.
+	 
+	 </h1>
+  
+</div>
+
+
+<!--Black box below -->
+
+<div class="topnav" id="myTopnav">
+ 
+	  <a class = "links" href="#home">Home</a>
+	  <a class = "links" href="#news">News</a>
+	  <a class = "links"href="#contact">Contact</a>
+	  <a class = "links"href="#about">About</a>
+	  <a class="icon" onclick="myFunction()">&#9776;</a>
+ </div>
+  
+ <!--Dropdown only shows when togglebar is clicked on small size -->
+  <div class="topnav-small" id="myTopnav-small">
+ 
+	  <a  href="#home">Home</a>
+	  <a  href="#news">News</a>
+	  <a href="#contact">Contact</a>
+	  <a href="#about">About</a>
+	
+  </div>
+
+
+  
+<!-- Slideshow of these images -->
+<div class = "big-pic fade">
+
+	<div id = "yo">
+	<p id = "trusted">Trusted</p>
+	<p id = "good"> Good</p>
+	<p id = "yeah">Yeah</p>
+  </div>
+</div>
+
+
+<div class = "big-pic fade" id = "two">
+ 
+
+	<div id = "yo">
+	<p id = "trusted">Trusted</p>
+	<p id = "good"> Good</p>
+	<p id = "yeah">Yeah</p>
+  </div>
+</div>
+
+
+<div class = "big-pic fade" id = "three">
+ 
+
+	<div id = "yo">
+	<p id = "trusted">Trusted</p>
+	<p id = "good"> Good</p>
+	<p id = "yeah">Yeah</p>
+  </div>
+</div>
+
+<div class = "big-pic fade" id = "four">
+ 
+	<div id = "yo">
+	<p id = "trusted">Trusted</p>
+	<p id = "good"> Good</p>
+	<p id = "yeah">Yeah</p>
+  </div>
+</div>
+
+
+
+
+ <div id = "practice-areas">
+ Our Practice Areas
+ 
+
+ <!--contains practice area squares -->
+ <div id = "practice">
+   <!--when screen is smaller this kicks in -->
+    <a class="prev" onclick="plusSlides()">&#10094;</a>
+	<div class = "practice-squares" id = "practice-squares1">
+       <img class = "square-pic" src = "injury.jpg">
+	   Personal Injury
+	   <hr>
+	   <div class = "read-more">
+	   Read More
+	</div>
+  </div>
+  
+  
+	<div class = "practice-squares foo">
+		<img class = "square-pic"  src = "CriminalDefense.jpg">
+		Criminal Defense
+		<hr>
+		<div class = "read-more">
+	   Read More
+	</div>
+		
+	</div>
+	
+	
+	<div class = "practice-squares foo">
+      <img class = "square-pic"  src = "passport.jpg">
+	  Immigration
+	  <hr>
+	  <div class = "read-more">
+	   Read More
+	 
+	</div>
+	</div>
+	
+	<div class = "practice-squares foo">
+      <img class = "square-pic"  src = "contract.jpg">
+	  Civil Litigation
+	  <hr>
+	  <div class = "read-more">
+	   Read More
+	 
+	</div>
+	</div>
+	
+	 
+      
+
+ </div>
+  
+  <a class="next" onclick="plusSlides()">&#10095;</a>
+  
+  
+ <script>
+ 
+	var n = 0;	
+ /*Runs when user clicks on three bar thingy */
+ 
+  function myFunction() {
+  
+    document.getElementById("myTopnav-small").classList.toggle("show");
+	
+	
+   
+    }
+	
+	
+	/*Function for practice squares slideshow */
+	function plusSlides() {
+	
+	
+	 var slides = document.getElementsByClassName("practice-squares");
+	slides[n].style.display = "none";
+	n++;
+	if (n==slides.length) {
+	  n=0;
+
+	}
+	slides[n].style.display = "inline-block";
+	
+	}
+	
+	
+	
+	
+
+/*Big pic slideshow */
+
+	var slideIndex = 0;
+	 
+	showSlides();
+	
+	function showSlides() {
+	
+		   var i;
+		   var slides2 = document.getElementsByClassName("big-pic");
+		  
+		  for (i=0; i<slides2.length; i++) {
+			slides2[i].style.display = "none";
+		   
+		   }
+		   slideIndex++;
+		   if (slideIndex > slides2.length) {
+			  slideIndex = 1;
+		   
+		   }
+		   
+		   slides2[slideIndex-1].style.display = "block";
+		   setTimeout(showSlides, 8000);
+	
+	}
+	
+	
+
+	
+	
+	
+  
+
+</script>
+
+
+</body>
+
+
+
+
+</html>
